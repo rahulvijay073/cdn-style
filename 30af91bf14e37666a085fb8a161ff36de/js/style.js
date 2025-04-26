@@ -7,7 +7,7 @@ window.onload = function() {
         Swal.fire({
             icon: 'warning',
             title: 'Warning!',
-            text: 'Please compete payment other wise project will be deleted',
+            text: 'Please complete payment other wise project will be deleted',
             confirmButtonText: 'Ok'
         }).then((result) => {
             if (result.isConfirmed) {
