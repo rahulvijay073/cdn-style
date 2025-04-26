@@ -1,0 +1,181 @@
+@import url('./boot.min.css');
+@import url('./boot.icon.css');
+@import url('./boot.datatable.css');
+@import url('./boot.button.css');
+@import url('./sweetalert.css');
+
+/* General Styles */
+body {
+    padding-top: 56px;
+    overflow-x: hidden;
+}   
+
+/* Sidebar Styles */    
+.sidebar {
+    min-height: calc(100vh - 56px);
+    background: #343a40;
+    color: white;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 250px;
+    transition: all 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,.75);
+    padding: 10px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar .nav-link:hover {
+    color: rgba(255,255,255,1);
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar .nav-link.active {
+    color: white;
+    background: rgba(255,255,255,0.2);
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+    width: calc(100% - 250px);
+}
+
+/* Top Navbar Styles */
+.top-navbar {
+    background: #343a40;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1001;
+}
+
+.sidebar-toggle {
+    display: none;
+}
+
+.navbar-brand {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Card Styles */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.required-field::after {
+    content: "*";
+    color: #dc3545;
+    margin-left: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    
+    .sidebar.active {
+        margin-left: 0;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Improve submenu visibility on mobile */
+    #settingsSubmenu {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ensure top navbar is above sidebar */
+    .top-navbar {
+        z-index: 1050;
+    }
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    max-width: 300px;
+}
+
+.dropdown-item {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Add these login styles to your existing style.css */
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Settings Submenu Styles */
+.sidebar .nav-link[data-bs-toggle="collapse"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar .nav-link[data-bs-toggle="collapse"] i.bi-chevron-down {
+    transition: transform 0.2s ease;
+}
+
+.sidebar .nav-link[aria-expanded="true"] i.bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+#settingsSubmenu {
+    border-left: 1px solid rgba(255,255,255,0.1);
+    margin-left: 10px;
+    transition: all 0.2s ease-out;
+}
+
+#settingsSubmenu .nav-link {
+    padding-left: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+#settingsSubmenu .nav-link:hover {
+    opacity: 1;
+}
+
+/* Improve performance with hardware acceleration */
+.sidebar .nav-link[data-bs-toggle="collapse"],
+#settingsSubmenu {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+} 
