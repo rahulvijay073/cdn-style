@@ -1,5 +1,5 @@
 // Set this variable as needed
-const ispayment = false; // Change to true to prevent deletion
+const ispayment = true; 
 
 // Check if a directory exists via AJAX (PHP endpoint required)
 window.onload = function() {
