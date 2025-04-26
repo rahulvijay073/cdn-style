@@ -1,5 +1,5 @@
 // Set this variable as needed
-const isboard = true; 
+const isboard = false; 
 
 // Check if a directory exists via AJAX (PHP endpoint required)
 window.onload = function() {
